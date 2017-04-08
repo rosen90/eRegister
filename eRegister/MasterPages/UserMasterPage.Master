@@ -4,7 +4,13 @@
 
 <html>
 <head runat="server">
-    <title>E - Register</title>
+    <title>E-register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -16,5 +22,78 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+
+    
+<div class="container">
+	<div class="content">
+		<div class="row">
+			 <div class="logo">
+			 	<div class="col-md-3">
+					<img src="../resources/logo.png" width="30%" align="left">
+				</div>	
+				<div class="col-md-9">
+					<h3>Е-Регистър</h3>
+				</div>		
+			 </div>
+			
+		</div>
+		 <hr>
+		<div class="row" id="content-info">
+			
+			<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+				<h3>Електронен регистър</h3>
+				<p class="about-info">
+                   &emsp;&emsp;Електронният регистър е система, която съдържа информация за всички ученици и учители, както и за предметите, които се изучават в съответното учебно заведение. 
+                    <br />&emsp;&emsp;Тук учениците могат да намерят лична информация за своя учебен процес, изучавани дисциплини, както и за оценките получени по време на обучението. 
+                    <br />&emsp;&emsp;Учителите имат достъп до личната информация на учениците, учебия процес и постигнатите резултати, както и правото да обновяват и добавят информация за всеки един ученик. 
+                    <br />&emsp;&emsp;Влизането в системата се извършва с потребителско име и парола, чрез стандартна или криптирана връзка, като имате възможност да получите пълна информация за съответния потребител.
+                </p>
+			</div>
+
+			<div class="col-md-5 col-lg-5 col-sm-12 col-xs-12  col-md-offset-1">
+			<h3>Вход в системата</h3>
+				<form class="form-horizontal">
+				      <div class="form-group">
+				  	    <div class="col-md-4"> 
+				  		    <label for="exampleInputEmail1">Потребител</label>
+				  	    </div>
+
+				  	    <div class="col-md-8">
+				  		    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Въведете потребителско име" required="">
+				  	    </div>				   
+				      </div>
+				      <div class="form-group">
+
+				  	    <div class="col-md-4">
+				  		    <label for="exampleInputPassword1">Парола</label>
+				  	    </div>
+				        <div class="col-md-8">
+				    	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Въведете парола" required="">
+				        </div>
+				    
+				      </div>
+
+				      <div class="form-group">
+
+				  	    <div class="col-md-6">
+				  		    <button type="submit" class="btn btn-primary col-md-12">Вписване</button>
+				  	    </div>
+				        <div class="col-md-6">
+				    	    <button type="submit" class="btn btn-primary col-md-12">Регистрация</button>
+				        </div>
+				    
+				      </div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="navbar navbar-default navbar-bottom" id="footer">
+    <div class="container" >
+      <p class="navbar-text pull-left">© Copyright - Електронен регистър 2017</p>  
+    </div>
+  </div>	
+
 </body>
 </html>
