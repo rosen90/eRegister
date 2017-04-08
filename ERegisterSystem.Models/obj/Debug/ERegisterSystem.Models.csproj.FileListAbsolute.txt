@@ -1,0 +1,4 @@
+C:\Users\Ramzi_bm\Desktop\gitERegister\eRegister\ERegisterSystem.Models\bin\Debug\ERegisterSystem.Models.dll
+C:\Users\Ramzi_bm\Desktop\gitERegister\eRegister\ERegisterSystem.Models\bin\Debug\ERegisterSystem.Models.pdb
+C:\Users\Ramzi_bm\Desktop\gitERegister\eRegister\ERegisterSystem.Models\obj\Debug\ERegisterSystem.Models.dll
+C:\Users\Ramzi_bm\Desktop\gitERegister\eRegister\ERegisterSystem.Models\obj\Debug\ERegisterSystem.Models.pdb
