@@ -4,15 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using eRegister.App_Model;
 
-namespace eRegister.Pages
+namespace eRegister.UserWebForms
 {
-    public partial class UserMasterPage : System.Web.UI.MasterPage
+    public partial class RegisterForm : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
         }
     }
 }
