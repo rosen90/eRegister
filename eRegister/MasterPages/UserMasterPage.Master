@@ -59,7 +59,7 @@
 				  	    </div>
 
 				  	    <div class="col-md-8">
-				  		    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Въведете потребителско име" required="">
+				  		    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" runat="server" placeholder="Въведете потребителско име" required="">
 				  	    </div>				   
 				      </div>
 				      <div class="form-group">
