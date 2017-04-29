@@ -142,6 +142,7 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="js\tabs.js" />
     <Content Include="obj\Debug\eRegister.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\eRegister.dll" />
     <Content Include="obj\Debug\eRegister.pdb" />
@@ -180,6 +181,7 @@
     <Content Include="UserWebForms\LogInForm.aspx" />
     <Content Include="UserWebForms\ProfileWebForm.aspx" />
     <Content Include="UserWebForms\RegisterForm.aspx" />
+    <Content Include="UserWebForms\ScoreWebForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -249,6 +251,13 @@
     </Compile>
     <Compile Include="UserWebForms\RegisterForm.aspx.designer.cs">
       <DependentUpon>RegisterForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserWebForms\ScoreWebForm.aspx.cs">
+      <DependentUpon>ScoreWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserWebForms\ScoreWebForm.aspx.designer.cs">
+      <DependentUpon>ScoreWebForm.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -50,7 +50,7 @@
 								Профил</a>
 							</li>
 							<li>
-								<a href="#" target="_blank">
+								<a href="#">
 								<i class="glyphicon glyphicon-ok"></i>
 								Оценки </a>
 							</li>
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</div>
-            <asp:ContentPlaceHolder ID="head" runat="server">
+            <asp:ContentPlaceHolder ID="scores" runat="server">
             </asp:ContentPlaceHolder>
 		</div>
 	</div>
@@ -69,9 +69,7 @@
     <div class="container">
       <p class="navbar-text pull-left">© Copyright - E-register 2017</p>  
     </div>
-    
-    
   </div>
-
+    <script type="text/javascript" src="../js/tabs.js"></script>
 </body>
 </html>

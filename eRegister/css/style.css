@@ -162,3 +162,26 @@ h3 {
 .btn-primary {
   font-size: 14pt;
 }
+
+/*Scores */
+
+.score-info {
+  width: 100%;
+  text-align: justify;
+  padding: 3%;
+}
+
+#myTabContent {
+  width: 100%;
+}
+
+.score-info p {
+  width: 100%;
+  font-size: 15px;
+}
+
+#av-score {
+  font-size: 20px;
+  font-weight: 700;
+  color: #337ab7;
+}
