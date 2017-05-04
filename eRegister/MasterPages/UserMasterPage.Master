@@ -15,13 +15,13 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" class="form-horizontal" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
-    </form>
+
 
     
 <div class="container">
@@ -52,23 +52,34 @@
 
 			<div class="col-md-5 col-lg-5 col-sm-12 col-xs-12  col-md-offset-1">
 			<h3>Вход в системата</h3>
-				<form class="form-horizontal">
 				      <div class="form-group">
 				  	    <div class="col-md-4"> 
 				  		    <label for="exampleInputEmail1">Потребител</label>
 				  	    </div>
 
 				  	    <div class="col-md-8">
-				  		    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" runat="server" placeholder="Въведете потребителско име" required="">
+				  		    <%--<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" runat="server" placeholder="Въведете потребителско име" required="">--%>
+                            <asp:TextBox ID="inputUser" runat="server" placeholder="Въведете потребителско име" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                                ControlToValidate="inputUser"
+                                ErrorMessage="User name is a required field."
+                                ForeColor="Red">
+                            </asp:RequiredFieldValidator>
 				  	    </div>				   
 				      </div>
 				      <div class="form-group">
 
 				  	    <div class="col-md-4">
-				  		    <label for="exampleInputPassword1">Парола</label>
+				  		    <%--<label for="exampleInputPassword1">Парола</label>--%>
+                            <asp:Label ID="test" runat="server" Font-Bold="true" Text="Парола" />
 				  	    </div>
 				        <div class="col-md-8">
-				    	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Въведете парола" required="">
+				    	    <asp:TextBox ID="inputPass" runat="server" placeholder="Въведете парола" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+                                ControlToValidate="inputPass"
+                                ErrorMessage="Password is a required field."
+                                ForeColor="Red">
+                            </asp:RequiredFieldValidator>
 				        </div>
 				    
 				      </div>
@@ -76,14 +87,13 @@
 				      <div class="form-group">
 
 				  	    <div class="col-md-6">
-				  		    <button type="submit" class="btn btn-primary col-md-12">Вписване</button>
+                            <asp:Button runat="server" OnClick="Button_Click" CssClass="btn btn-primary col-md-12" Text="Вписване" />
 				  	    </div>
 				        <div class="col-md-6">
-				    	    <button type="submit" class="btn btn-primary col-md-12">Регистрация</button>
+				    	    <asp:Button runat="server" CssClass="btn btn-primary col-md-12" Text="Регистрация" />
 				        </div>
 				    
 				      </div>
-				</form>
 			</div>
 		</div>
 	</div>
@@ -94,6 +104,6 @@
       <p class="navbar-text pull-left">© Copyright - Електронен регистър 2017</p>  
     </div>
   </div>	
-
+</form>
 </body>
 </html>

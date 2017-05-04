@@ -12,9 +12,15 @@ namespace eRegister.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var db = new eRegisterContext();
+            //var db = new eRegisterContext();
 
-            exampleInputEmail1.Value = db.WeekDays.First().WeekDay1.ToString();
+            //exampleInputEmail1.Value = db.WeekDays.First().WeekDay1.ToString();
+
+        }
+
+        protected void Button_Click(object sender, EventArgs e)
+        {
+            test.Text = "Работи!!";
         }
     }
 }
