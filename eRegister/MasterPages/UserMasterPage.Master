@@ -63,7 +63,8 @@
                             <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
                                 ControlToValidate="inputUser"
                                 ErrorMessage="User name is a required field."
-                                ForeColor="Red">
+                                ForeColor="Red"
+                                Enabled="true">
                             </asp:RequiredFieldValidator>
 				  	    </div>				   
 				      </div>
@@ -78,7 +79,8 @@
                             <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
                                 ControlToValidate="inputPass"
                                 ErrorMessage="Password is a required field."
-                                ForeColor="Red">
+                                ForeColor="Red"
+                                Enabled="true">
                             </asp:RequiredFieldValidator>
 				        </div>
 				    
@@ -87,10 +89,10 @@
 				      <div class="form-group">
 
 				  	    <div class="col-md-6">
-                            <asp:Button runat="server" OnClick="Button_Click" CssClass="btn btn-primary col-md-12" Text="Вписване" />
+                            <asp:Button runat="server" CausesValidation="true" OnClick="Button_Click" CssClass="btn btn-primary col-md-12" Text="Вписване" />
 				  	    </div>
 				        <div class="col-md-6">
-				    	    <asp:Button runat="server" CssClass="btn btn-primary col-md-12" Text="Регистрация" />
+				    	    <asp:Button runat="server" CausesValidation="false" ID="btnRegister" OnClick="btnRegister_Click" CssClass="btn btn-primary col-md-12" Text="Регистрация" />
 				        </div>
 				    
 				      </div>

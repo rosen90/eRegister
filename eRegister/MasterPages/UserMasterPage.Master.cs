@@ -51,5 +51,10 @@ namespace eRegister.Pages
         {
             return currentUser;
         }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UserWebForms/RegisterForm.aspx");
+        }
     }
 }
