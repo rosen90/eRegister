@@ -11,7 +11,7 @@ namespace eRegister.App_Model
     {
         public int TeacherSubjectID { get; set; }
 
-        public Guid TeacherID { get; set; }
+        public int TeacherID { get; set; }
 
         public short SubjectID { get; set; }
 

@@ -59,7 +59,7 @@
 					</div>
 				</div>
 			</div>
-            <asp:ContentPlaceHolder ID="scores" runat="server">
+            <asp:ContentPlaceHolder ID="content" runat="server">
             </asp:ContentPlaceHolder>
 		</div>
 	</div>

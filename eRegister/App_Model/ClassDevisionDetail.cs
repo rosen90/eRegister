@@ -28,7 +28,7 @@ namespace eRegister.App_Model
 
         public int IDProfil { get; set; }
 
-        public Guid? TeacherID { get; set; }
+        public int? TeacherID { get; set; }
 
         public virtual Actor Actor { get; set; }
 

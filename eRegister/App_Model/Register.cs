@@ -24,7 +24,7 @@ namespace eRegister.App_Model
         [Column(TypeName = "date")]
         public DateTime? Date { get; set; }
 
-        public Guid TeacherID { get; set; }
+        public int TeacherID { get; set; }
 
         public int TermID { get; set; }
 

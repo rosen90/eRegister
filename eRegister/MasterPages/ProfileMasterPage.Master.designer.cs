@@ -13,12 +13,12 @@ namespace eRegister.MasterPages {
     public partial class ProfileMasterPage {
         
         /// <summary>
-        /// scores control.
+        /// content control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder scores;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder content;
     }
 }

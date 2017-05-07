@@ -11,7 +11,7 @@ namespace eRegister.App_Model
         [Key]
         public int NumInClassDetID { get; set; }
 
-        public Guid StudentID { get; set; }
+        public int StudentID { get; set; }
 
         public int Number { get; set; }
 

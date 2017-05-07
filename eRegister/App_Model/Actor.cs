@@ -19,7 +19,6 @@ namespace eRegister.App_Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Actor()
         {
-            this.ActorID = Guid.NewGuid(); 
             this.absences = new HashSet<Absence>();
             this.actors1 = new HashSet<Actor>();
             this.classDevisionDetails = new HashSet<ClassDevisionDetail>();
@@ -30,7 +29,7 @@ namespace eRegister.App_Model
             this.teacherSubjects = new HashSet<TeacherSubject>();
         }
 
-        public Guid ActorID { get; set; }
+        public int ActorID { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -61,7 +60,7 @@ namespace eRegister.App_Model
         [StringLength(15)]
         public string PhoneNumber { get; set; }
 
-        public Guid? ParentlID { get; set; }
+        public int? ParentlID { get; set; }
 
         public int? UserID { get; set; }
 

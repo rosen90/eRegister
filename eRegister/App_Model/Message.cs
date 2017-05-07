@@ -21,9 +21,9 @@ namespace eRegister.App_Model
 
         public int MessageTypeID { get; set; }
 
-        public Guid MessageFromID { get; set; }
+        public int MessageFromID { get; set; }
 
-        public Guid MessageToID { get; set; }
+        public int MessageToID { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime CreationDate { get; set; }

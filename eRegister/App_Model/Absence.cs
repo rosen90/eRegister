@@ -10,7 +10,7 @@ namespace eRegister.App_Model
     {
         public int AbsenceID { get; set; }
 
-        public Guid StudentID { get; set; }
+        public int StudentID { get; set; }
 
         public short SubjectID { get; set; }
 

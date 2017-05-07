@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/ProfileMasterPage.Master" AutoEventWireup="true" CodeBehind="ProfileWebForm.aspx.cs" Inherits="eRegister.UserWebForms.ProfileWebForm" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="content" runat="server">
 		
 			<div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
 				<div class="col-md-6">
