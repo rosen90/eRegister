@@ -54,6 +54,11 @@
 								<i class="glyphicon glyphicon-ok"></i>
 								Оценки </a>
 							</li>
+                            <li>
+								<a href="#">
+								<i class="glyphicon glyphicon-envelope"></i>
+								Съобщения </a>
+							</li>
 							
 						</ul>
 					</div>
