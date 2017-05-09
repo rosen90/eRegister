@@ -42,21 +42,24 @@
                       
 						<ul class="nav">
                             <li>
-	                            <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-home'></i> Меню </asp:LinkButton>
+	                            <asp:LinkButton ID="btnMenu" runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-home'></i> Меню </asp:LinkButton>
                             </li>
 							
                             <li>
-                                <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Профил </asp:LinkButton>
+                                <asp:LinkButton ID="btnProfile" runat="server" OnClick="btnProfile_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Профил </asp:LinkButton>
                             </li> 
 														
                             <li>
-	                            <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-ok'></i> Оценки </asp:LinkButton>
+	                            <asp:LinkButton ID="btnScores" runat="server" OnClick="btnScores_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-ok'></i> Оценки </asp:LinkButton>
                             </li>
                             <li>
-	                            <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-envelope'></i> Съобщения </asp:LinkButton>
+	                            <asp:LinkButton ID="btnMessages" runat="server" OnClick="btnMessages_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-envelope'></i> Съобщения </asp:LinkButton>
                             </li>
                             <li>
-	                            <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-picture'></i> Галерия </asp:LinkButton>
+	                            <asp:LinkButton ID="btnGallery" runat="server" OnClick="btnGallery_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-picture'></i> Галерия </asp:LinkButton>
+                            </li>
+                            <li>
+	                            <asp:LinkButton ID="btnLogOut" runat="server" OnClick="btnLogOut_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-log-out'></i> Изход </asp:LinkButton>
                             </li>
 							
 						</ul>

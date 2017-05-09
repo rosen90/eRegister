@@ -38,13 +38,13 @@ namespace eRegister.Pages
         bool CheckForUser()
         {
             var db = new eRegisterContext();
-            currentUser = db.Users.First(x => x.UserName == inputUser.Text && x.Password == inputPass.Text);
-            if (currentUser == null)
+            if (db.Users.Any(x => x.UserName == inputUser.Text && x.Password == inputPass.Text))
             {
-                return false;
+                currentUser = db.Users.First(x => x.UserName == inputUser.Text && x.Password == inputPass.Text);
+                return true;
             }
 
-            return true;
+            return false;
         }
 
         public static User getCurrUser()
