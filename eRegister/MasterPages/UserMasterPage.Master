@@ -75,7 +75,7 @@
                             <asp:Label ID="test" runat="server" Font-Bold="true" Text="Парола" />
 				  	    </div>
 				        <div class="col-md-8">
-				    	    <asp:TextBox ID="inputPass" runat="server" placeholder="Въведете парола" CssClass="form-control" />
+				    	    <asp:TextBox ID="inputPass" runat="server" TextMode="Password" placeholder="Въведете парола" CssClass="form-control" />
                             <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
                                 ControlToValidate="inputPass"
                                 ErrorMessage="Password is a required field."

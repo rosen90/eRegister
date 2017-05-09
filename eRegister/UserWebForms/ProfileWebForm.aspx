@@ -44,14 +44,11 @@
 					</ul>
 				</div>
 				<div class="col-md-6">
-                    <hr/>
 					<ul class="personal-info">
-						<li><h3>Съобщения:</h3></li>
-
-						<div class="form-group">
-						 
-						  <textarea class="form-control" rows="5" id="comment"></textarea>
-						</div>
+						<li><h3>Родител:</h3></li>
+                        <hr/>
+						<li><label>Име:</label> Петър Петров</li>
+                        <li><label>Телефон:</label> +35988323425</li>
 						
 					</ul>
 				</div>

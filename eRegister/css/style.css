@@ -92,7 +92,7 @@ h3 {
 
 .profile-usermenu ul li a {
   color: #93a3b5;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -184,4 +184,17 @@ h3 {
   font-size: 20px;
   font-weight: 700;
   color: #337ab7;
+}
+
+.menu-btn {
+    background-color: none;
+    color: #93a3b5;
+    text-align: justify;
+}
+
+.menu-btn:hover {
+    background-color: rgba(51, 122, 183, 0.21);
+    color: #337ab7;
+    font-weight: 700;
+    font-size: 17px;
 }

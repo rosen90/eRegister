@@ -32,17 +32,35 @@
 			 	<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 			 		<div class="col-md-8">
 				 		<label>Потребителско име <span class="star">*</span> :</label>
-				 		<input type="text" class="form-control" name="" required="">
+				 		<asp:TextBox ID="inputUsername" runat="server" placeholder="Въведете потребителско име" CssClass="form-control" />
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                            ControlToValidate="inputUsername"
+                            ErrorMessage="User name is a required field."
+                            ForeColor="Red"
+                            Enabled="true">
+                        </asp:RequiredFieldValidator>
 				 	</div>
 
 				 	<div class="col-md-8">
 				 		<label>Парола <span class="star">*</span> :</label>
-				 		<input type="password" class="form-control" name="" required="">
+				 		<asp:TextBox ID="inputPassword" runat="server" TextMode="Password" placeholder="Въведете парола" CssClass="form-control" />
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
+                            ControlToValidate="inputPassword"
+                            ErrorMessage="Password is a required field."
+                            ForeColor="Red"
+                            Enabled="true">
+                        </asp:RequiredFieldValidator>
 				 	</div>
 
 				 	<div class="col-md-8">
 				 		<label>Потвърди парола <span class="star">*</span> :</label>
-				 		<input type="password" class="form-control" name="" required="">
+				 			<asp:TextBox ID="inputPasswordConfirm" runat="server" TextMode="Password" placeholder="Въведете парола" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+                                ControlToValidate="inputPasswordConfirm"
+                                ErrorMessage="Password is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
 				 	</div>
 			 	</div>	
 			 	<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">	
@@ -69,15 +87,33 @@
 				 	<div class="col-md-12">
 					 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
 					 		<label>Име:</label><br/>
-					 		<input type="text" name="" class="form-control" required="">
+					 		<asp:TextBox ID="Name" runat="server" placeholder="Въведете име" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator4" runat="server"
+                                ControlToValidate="Name"
+                                ErrorMessage="Name is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
 					 	</div>
 					 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
 					 		<label>Презиме:</label><br/>
-					 		<input type="text" name="" class="form-control" required="">
+					 		<asp:TextBox ID="Midname" runat="server" placeholder="Въведете презиме" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator5" runat="server"
+                                ControlToValidate="Midname"
+                                ErrorMessage="Midname is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
 					 	</div>
 					 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
 					 		<label>Фамилия:</label><br/>
-					 		<input type="text" name="" class="form-control" required="">
+					 		<asp:TextBox ID="Lastname" runat="server" placeholder="Въведете фамилия" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator6" runat="server"
+                                ControlToValidate="Lastname"
+                                ErrorMessage="Lastname is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
 					 	</div>
 					 </div>
 				 </div>
@@ -88,7 +124,13 @@
 			 			<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
 				 			 <div class="form-group">
 							    <label for="exampleSelect1">ЕГН:</label>
-							    <input type="text" name="" class="form-control" required="">
+					 		    <asp:TextBox ID="PersonalID" runat="server" placeholder="Въведете егн" CssClass="form-control" />
+                                <asp:RequiredFieldValidator id="RequiredFieldValidator7" runat="server"
+                                    ControlToValidate="PersonalID"
+                                    ErrorMessage="Personal ID is a required field."
+                                    ForeColor="Red"
+                                    Enabled="true">
+                                </asp:RequiredFieldValidator>
 							  </div>
 			 			</div>
 			 			<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
@@ -135,15 +177,33 @@
 				 	<div class="col-md-12">
 					 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
 					 		<label>Адрес:</label><br/>
-					 		<input type="text" name="" class="form-control" placeholder="гр./с., ж.к., ул., №, вх. ап. " required="">
+					 		<asp:TextBox ID="Address" runat="server" placeholder="гр./с., ж.к., ул., №, вх. ап. " CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator8" runat="server"
+                                ControlToValidate="Address"
+                                ErrorMessage="Address is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
 					 	</div>
 					 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
 					 		<label>Email адрес:</label><br/>
-					 		<input type="email" name="" class="form-control" placeholder="mail@example.com" required="">
+					 		<asp:TextBox ID="Email" runat="server" placeholder="mail@example.com" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator9" runat="server"
+                                ControlToValidate="Email"
+                                ErrorMessage="Email is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
 					 	</div>
 					 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" >
 					 		<label>Телефон:</label><br/>
-					 		<input type="number" name="" class="form-control" placeholder="+359 00 000 000" required="">
+                            <asp:TextBox ID="Number" runat="server" placeholder="+359 00 000 000" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator10" runat="server"
+                                ControlToValidate="Number"
+                                ErrorMessage="Number is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
 					 	</div>
 					 </div>
 				 </div>
@@ -173,7 +233,13 @@
 				 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" >
 				 		<div class="form-group">
 						    <label for="exampleSelect1">Град/Село:</label>
-						    <input type="text" name="" class="form-control" required="">
+                            <asp:TextBox ID="Town" runat="server" placeholder="Населено място" CssClass="form-control" />
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator11" runat="server"
+                                ControlToValidate="Town"
+                                ErrorMessage="Town is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
 						  </div>
 				 	</div>
 				 </div>
@@ -181,7 +247,7 @@
 			 <hr>
 			 <div class="clearfix"></div>
 			 	<div class="row" id="reg-btn">			 	
-			 		<button type="submit" class="btn btn-primary">Регистрация</button>
+                     <asp:Button runat="server" CausesValidation="true" CssClass="btn btn-primary col-md-4 col-md-offset-4" Text="Регистрация" />
 			 	</div>
 			 <div class="clearfix"></div>
 		</div>

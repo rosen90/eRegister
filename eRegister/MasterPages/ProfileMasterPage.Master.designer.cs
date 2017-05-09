@@ -13,6 +13,15 @@ namespace eRegister.MasterPages {
     public partial class ProfileMasterPage {
         
         /// <summary>
+        /// formNav control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm formNav;
+        
+        /// <summary>
         /// content control.
         /// </summary>
         /// <remarks>

@@ -12,19 +12,20 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
 </head>
 
 <body>
-
+<form id="formNav" class="form-horizontal" runat="server">
 <div class="container">
 	<div class="content">
 		<div class="row">
 			 <div class="logo">
 			 	<div class="col-md-3">
-					<img src="../resources/logo.png" width="30%" align="left"/>
+					<img src="../resources/logo.png" width="30%" align="left" class="animated bounceInLeft"/>
 				</div>	
 				<div class="col-md-9">
-					<h3>E-register</h3>
+					<h3 class="animated bounceInRight" style="animation-delay: 1s">E-register</h3>
 				</div>		
 			 </div>
 		</div>
@@ -38,29 +39,28 @@
 					</div>
 					
 					<div class="profile-usermenu">
+                      
 						<ul class="nav">
-							<li class="active">
-								<a href="#">
-								<i class="glyphicon glyphicon-home"></i>
-								Меню </a>
-							</li>
-							<li>
-								<a href="#">
-								<i class="glyphicon glyphicon-user"></i>
-								Профил</a>
-							</li>
-							<li>
-								<a href="#">
-								<i class="glyphicon glyphicon-ok"></i>
-								Оценки </a>
-							</li>
                             <li>
-								<a href="#">
-								<i class="glyphicon glyphicon-envelope"></i>
-								Съобщения </a>
-							</li>
+	                            <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-home'></i> Меню </asp:LinkButton>
+                            </li>
+							
+                            <li>
+                                <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Профил </asp:LinkButton>
+                            </li> 
+														
+                            <li>
+	                            <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-ok'></i> Оценки </asp:LinkButton>
+                            </li>
+                            <li>
+	                            <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-envelope'></i> Съобщения </asp:LinkButton>
+                            </li>
+                            <li>
+	                            <asp:LinkButton runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-picture'></i> Галерия </asp:LinkButton>
+                            </li>
 							
 						</ul>
+                           
 					</div>
 				</div>
 			</div>
@@ -76,5 +76,6 @@
     </div>
   </div>
     <script type="text/javascript" src="../js/tabs.js"></script>
+    </form>
 </body>
 </html>
