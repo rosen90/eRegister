@@ -3,14 +3,33 @@
     <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
 				
 				<div class="tabbable boxed parentTabs">
-				    <ul class="nav nav-tabs">
+                    <asp:ListView ID="subjectsList" runat="server" SelectedIndex="0" OnItemDataBound="subjectsList_ItemDataBound">
+                        <LayoutTemplate>
+                            <ul class="nav nav-tabs">
+                                <asp:PlaceHolder ID="itemPlaceholder" runat="server" />    
+                            </ul>                
+                        </LayoutTemplate>
+                        <ItemTemplate>
+                            <li runat="server" id="listElement">
+                                <a href=#set<%#Eval("SubjectID")%>><%#Eval("Name")%></a>
+                            </li>
+                        </ItemTemplate>
+                        <EmptyDataTemplate>
+                            <p>Nothing here.</p>
+                        </EmptyDataTemplate>
+                    </asp:ListView>
+				    <%--<ul class="nav nav-tabs">
 				        <li class="active"><a href="#set1">Български език и литература</a>
 				        </li>
 				        <li><a href="#set2">Математика</a>
 				        </li>
 				        <li><a href="#set3">Физика</a>
 				        </li>
-				    </ul>
+                        <li><a href="#set4">Български език и литература</a>
+				        </li>
+                        <li><a href="#set5">Български език и литература</a>
+				        </li>
+				    </ul>--%>
 				    <div class="tab-content">
 				        <div class="tab-pane fade active in" id="set1">
 				            <div class="tabbable score-info">
