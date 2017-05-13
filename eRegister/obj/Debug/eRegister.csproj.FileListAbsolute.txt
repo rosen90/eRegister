@@ -52,6 +52,6 @@ E:\Projects\eRegister\eRegister\eRegister\bin\roslyn\VBCSCompiler.exe.config
 E:\Projects\eRegister\eRegister\eRegister\bin\eRegister.dll.config
 E:\Projects\eRegister\eRegister\eRegister\bin\eRegister.dll
 E:\Projects\eRegister\eRegister\eRegister\bin\eRegister.pdb
-E:\Projects\eRegister\eRegister\eRegister\obj\Debug\eRegister.csprojResolveAssemblyReference.cache
 E:\Projects\eRegister\eRegister\eRegister\obj\Debug\eRegister.dll
 E:\Projects\eRegister\eRegister\eRegister\obj\Debug\eRegister.pdb
+E:\Projects\eRegister\eRegister\eRegister\obj\Debug\eRegister.csprojResolveAssemblyReference.cache

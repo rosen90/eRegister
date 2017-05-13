@@ -181,8 +181,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\avatar.png" />
+    <Content Include="resources\change.png" />
     <Content Include="resources\logo.png" />
     <Content Include="resources\user.jpg" />
+    <Content Include="UserWebForms\AdminPage.aspx" />
     <Content Include="UserWebForms\LogInForm.aspx" />
     <Content Include="UserWebForms\ProfileWebForm.aspx" />
     <Content Include="UserWebForms\RegisterForm.aspx" />
@@ -236,6 +238,13 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserWebForms\AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserWebForms\AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserWebForms\LogInForm.aspx.cs">
       <DependentUpon>LogInForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
