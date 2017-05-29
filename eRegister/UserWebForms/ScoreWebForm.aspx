@@ -30,11 +30,12 @@
                         <li><a href="#set5">Български език и литература</a>
 				        </li>
 				    </ul>--%>
-				    <div class="tab-content">
+				    <div class="tab-content" runat="server" id="divContent">
 				        <div class="tab-pane fade active in" id="set1">
 				            <div class="tabbable score-info">
-				            	<p>
-				            		<label>Учител: </label> Иван Иванов
+				            	<p >
+				            		<label>Учител: </label>
+                                    <label id="teacherLbl" runat="server" style="font-weight:normal"> Иван Иванов </label>
 				            	</p>
 
 				            	<p>
