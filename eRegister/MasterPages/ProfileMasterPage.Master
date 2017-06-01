@@ -41,10 +41,7 @@
 					<div class="profile-usermenu">
                       
 						<ul class="nav">
-                            <li>
-	                            <asp:LinkButton ID="btnMenu" runat="server" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-home'></i> Меню </asp:LinkButton>
-                            </li>
-							
+                            							
                             <li>
                                 <asp:LinkButton ID="btnProfile" runat="server" OnClick="btnProfile_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Профил </asp:LinkButton>
                             </li> 

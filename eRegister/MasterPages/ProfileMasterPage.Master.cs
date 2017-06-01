@@ -26,7 +26,7 @@ namespace eRegister.MasterPages
 
         protected void btnGallery_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/UserWebForms/GalleryWebForm.aspx");
         }
 
         protected void btnProfile_Click(object sender, EventArgs e)

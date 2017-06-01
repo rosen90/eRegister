@@ -22,15 +22,6 @@ namespace eRegister.MasterPages {
         protected global::System.Web.UI.HtmlControls.HtmlForm formNav;
         
         /// <summary>
-        /// btnMenu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnMenu;
-        
-        /// <summary>
         /// btnProfile control.
         /// </summary>
         /// <remarks>

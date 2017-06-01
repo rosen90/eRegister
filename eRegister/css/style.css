@@ -286,3 +286,12 @@ hr {
 .reg-btn:not(.first-reg) {
   margin-top: 50px;
 }
+.Grid {background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; font-family:Calibri; color: #474747;}
+.Grid td {
+      padding: 10px;
+      border: solid 1px #c1c1c1; }
+.Grid th  {
+      padding : 10px;
+      color: #fff;
+      
+      font-size: 0.9em; }
