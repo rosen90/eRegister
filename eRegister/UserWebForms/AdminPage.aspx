@@ -41,32 +41,15 @@
 
 		<div class="row selection">
 			<div class="col-md-3">
-				<select class="form-control">
-					<option>Град</option>
-			        <option>София</option>
-			        <option>Пловдив</option>
-			        <option>Варна</option>
-			        <option>Бургас</option>
-			      </select>
+                <asp:DropDownList ID="ddlCity" CssClass="form-control" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" runat="server"></asp:DropDownList>
 			</div>
 
 			<div class="col-md-3">
-				<select class="form-control" >
-					<option>Училище</option>
-			        <option>СОУ</option>
-			        <option>ЕГ</option>
-			        <option>МГ</option>
-			      </select>
+                <asp:DropDownList ID="ddlSchool" CssClass="form-control" OnSelectedIndexChanged="ddlSchool_SelectedIndexChanged" runat="server"></asp:DropDownList>
 			</div>
 
 			<div class="col-md-3">
-				<select class="form-control" >
-					<option>Клас</option>
-			        <option>9</option>
-			        <option>10</option>
-			        <option>11</option>
-			        <option>12</option>
-			      </select>
+                <asp:DropDownList ID="ddlClass" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlClass_SelectedIndexChanged"></asp:DropDownList>
 			</div>
 		</div>
 
