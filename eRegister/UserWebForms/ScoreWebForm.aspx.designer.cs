@@ -13,22 +13,40 @@ namespace eRegister.UserWebForms {
     public partial class ScoreWebForm {
         
         /// <summary>
-        /// subjectsList control.
+        /// dropDownListSubjects control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView subjectsList;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownListSubjects;
         
         /// <summary>
-        /// divContent control.
+        /// dropDownListStudyYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divContent;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownListStudyYear;
+        
+        /// <summary>
+        /// dropDownListTerm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropDownListTerm;
+        
+        /// <summary>
+        /// showTeacherLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl showTeacherLbl;
         
         /// <summary>
         /// teacherLbl control.

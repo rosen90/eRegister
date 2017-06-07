@@ -20,71 +20,62 @@ namespace eRegister.UserWebForms
                 if (db.Subjects.Any())
                 {
                     var subjects = db.Subjects.ToList();
-                    subjectsList.DataSource = subjects;
-                    subjectsList.DataBind();
+                    var studyYear = db.StudyYears.ToList();
+                    
+                    dropDownListSubjects.DataSource = subjects;
+                    dropDownListSubjects.DataValueField = "SubjectID";
+                    dropDownListSubjects.DataTextField = "Name";
+                    dropDownListSubjects.DataBind();
+                    dropDownListSubjects.Items.Insert(0, "Избери");
+
+                    dropDownListStudyYear.DataSource = studyYear;
+                    dropDownListStudyYear.DataValueField = "StudyYearID";
+                    dropDownListStudyYear.DataTextField = "StudyYear1";
+                    dropDownListStudyYear.DataBind();
+                    dropDownListStudyYear.Items.Insert(0, "Избери");
+
+                    dropDownListTerm.Items.Insert(0, "Избери");
+                    dropDownListTerm.Items.Add(new ListItem("Първи", "1"));
+                    dropDownListTerm.Items.Add(new ListItem("Втори", "2"));
+                    
 
                 }
-               
             }
-            LoadTeacher();
-
-            //if (!Page.IsPostBack)
-            //{
-            //    LoadDynamicallyHtmlCode();
-            //}
             
         }
 
-        void LoadTeacher()
+        protected void dropDownListSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var db = new eRegisterContext();
-            teacherLbl.InnerText = db.TeacherSubjects.FirstOrDefault(x => x.SubjectID == subjectsList.SelectedIndex + 1).Actor.FirstName.ToString() + " " +
-                db.TeacherSubjects.FirstOrDefault(x => x.SubjectID == subjectsList.SelectedIndex + 1).Actor.LastName.ToString();
-
+            showTeacherLabel();
         }
 
-        private void LoadDynamicallyHtmlCode()
+        protected void dropDownListStudyYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showTeacherLabel();
+        }
+
+        protected void dropDownListTerm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showTeacherLabel();
+        }
+
+        private void showTeacherLabel()
         {
             var db = new eRegisterContext();
-            List<Subject> listSubjects = null;
-            if (db.Subjects.Any())
+            short selectedValue = Convert.ToInt16(dropDownListSubjects.SelectedValue);
+            if ( dropDownListStudyYear.SelectedIndex != 0 && dropDownListSubjects.SelectedIndex 
+                != 0 && dropDownListTerm.SelectedIndex != 0  && db.TeacherSubjects.Any(x => x.SubjectID == selectedValue))
             {
-                listSubjects = db.Subjects.ToList();
-
-            }
-            string htmlCode = "";
-            for (int i = 1; i <= listSubjects.Count; i++)
-            {
-                if ( i == 1 )
-                {
-                    htmlCode += "<div class=\"tab - pane fade active in\" ";
-                }
-                else
-                {
-                    htmlCode += "<div class=\"tab - pane fade\" ";
-                }
-                htmlCode += "id=\"set" + i.ToString() + "\"> \n <div class=\"tabbable score-info\"> <p> <label>Учител: </label> Иван Иванов";
-                htmlCode += "</p> <p> <label>Оценки:" + i.ToString() + "</label> </p> <ul class=\"nav nav-tabs\">  <li class=\"active\"><a href = \"#sub11\" > Първи срок</a>";
-                htmlCode += "</li>  <li><a href = \"#sub12\" > Втори срок</a>  </li>  </ul>";
-                htmlCode += "<div class=\"tab -content\"> <div class=\"tab-pane fade active in\" id=\"sub11\">  <table class=\"table\">";
-                htmlCode += "<thead>  <tr>  <th>#</th>  <th>Форма на контрол</th>  <th>Оценка</th>  <th>Дата</th>  </tr>  </thead>";
-                htmlCode += "<tbody> <tr> <td>1</td>  <td>Текуща оценка</td>  <td>Много добър (5)</td>  <td>29.04.2017</td>  </tr>  <tr>";
-                htmlCode += "<td>2</td> <td>Текуща оценка</td> <td>Добър (4)</td> <td>29.04.2017</td>  </tr> <tr>  <td>3</td>";
-                htmlCode += "<td>Текуща оценка</td> <td>Много добър (5)</td> <td>29.04.2017</td> </tr> </tbody> </table>";
-                htmlCode += "<label>Среден успех: </label> <span id = \"av -score\" > 4,66</span> </div> </div> </div> </div>";
                 
+                showTeacherLbl.Visible = true;
+                teacherLbl.InnerText = db.TeacherSubjects.FirstOrDefault(x => x.SubjectID == selectedValue).Actor.FirstName.ToString() + " " +
+                    db.TeacherSubjects.FirstOrDefault(x => x.SubjectID == selectedValue).Actor.LastName.ToString();
             }
-            divContent.InnerHtml = htmlCode;
-        }
-
-        protected void subjectsList_ItemDataBound(object sender, ListViewItemEventArgs e)
-        {
-            if (e.Item.DataItemIndex == 0)
+            else
             {
-                HtmlGenericControl myLi = (HtmlGenericControl)e.Item.FindControl("listElement");
-                myLi.Attributes.Add("class","active");
+                teacherLbl.InnerText = "";
+                showTeacherLbl.Visible = false;
             }
-
         }
     }
 }
