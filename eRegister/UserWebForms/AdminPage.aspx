@@ -41,15 +41,15 @@
 
 		<div class="row selection">
 			<div class="col-md-3">
-                <asp:DropDownList ID="ddlCity" CssClass="form-control" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlCity" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" runat="server"></asp:DropDownList>
 			</div>
 
 			<div class="col-md-3">
-                <asp:DropDownList ID="ddlSchool" CssClass="form-control" OnSelectedIndexChanged="ddlSchool_SelectedIndexChanged" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlSchool" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlSchool_SelectedIndexChanged" runat="server"></asp:DropDownList>
 			</div>
 
 			<div class="col-md-3">
-                <asp:DropDownList ID="ddlClass" runat="server" CssClass="form-control" OnSelectedIndexChanged="ddlClass_SelectedIndexChanged"></asp:DropDownList>
+                <asp:DropDownList ID="ddlClass" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlClass_SelectedIndexChanged"></asp:DropDownList>
 			</div>
 		</div>
 
@@ -59,74 +59,37 @@
 			</div>
 
 			<div class="col-md-3" style="text-align: left;">
-				<form  class="search-form">
+                <asp:TextBox ID="txtSearch" runat="server" name="search" placeholder="Търси..." CssClass="form-control"></asp:TextBox>
+            </div>
+            <div class="col-md-3" style="text-align: left;">
+                <asp:LinkButton ID="searchButton" runat="server" CssClass="btn btn-primary"><span class="glyphicon glyphicon-search"></span></asp:LinkButton>
+                
+				<%--<form runat="server" class="search-form">
                 	<div class="form-group has-feedback">
 	            		<label for="search" class="sr-only">Търси</label>
-	            		<input type="text" class="form-control" name="search" id="search" placeholder="Търси...">
+                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"></asp:TextBox>
+                        <input type="text" class="form-control" name="search" id="search" placeholder="Търси...">
 	              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
 	            	</div>
-            	</form>
+            	</form>--%>
 			</div>	
 		</div>
 
 		<div class="row">
 
 			<div class="col-md-6">
-				<table class="table">
-				    <thead>
-				      <tr>
-				        <th>#</th>
-				        <th>Име</th>
-				        <th>Тип</th>				        
-				      </tr>
-				    </thead>
-				    <tbody>
-				      <tr>
-				        <td>1</td>
-				        <td>Иван Петров Петров</td>
-				        <td>Ученик</td>
-				      </tr>
-				      <tr>
-				        <td>2</td>
-				        <td>Петър Иванов Иванов</td>
-				        <td>Родител</td>
-				      </tr>
-				      <tr>
-				        <td>3</td>
-				        <td>Галя Иванова Иванова</td>
-				        <td>Учител</td>
-				      </tr>
-				      <tr>
-				        <td>1</td>
-				        <td>Иван Петров Петров</td>
-				        <td>Ученик</td>
-				      </tr>
-				      <tr>
-				        <td>2</td>
-				        <td>Петър Иванов Иванов</td>
-				        <td>Родител</td>
-				      </tr>
-				      <tr>
-				        <td>3</td>
-				        <td>Галя Иванова Иванова</td>
-				        <td>Учител</td>
-				      </tr><tr>
-				        <td>1</td>
-				        <td>Иван Петров Петров</td>
-				        <td>Ученик</td>
-				      </tr>
-				      <tr>
-				        <td>2</td>
-				        <td>Петър Иванов Иванов</td>
-				        <td>Родител</td>
-				      </tr>
-				      <tr>
-				        <td>3</td>
-				        <td>Галя Иванова Иванова</td>
-				        <td>Учител</td>
-				      </tr>
-				    </tbody>
-				</table>
+                <asp:GridView ID="gridViewUsers" runat="server" CssClass="table" AutoGenerateSelectButton="true" AllowPaging="true" AutoGenerateColumns="false">
+                    <Columns>
+                        <asp:BoundField DataField="UserID" HeaderText="#"/>
+                        <%--<asp:TemplateField HeaderText="Име">
+                            <ItemTemplate>
+                                <div><%#Eval("FirstName")%> <%#Eval("MiddleName")%> <%#Eval("LastName")%></div>
+                            </ItemTemplate>
+                        </asp:TemplateField>--%>
+                        <asp:BoundField DataField="FullName" HeaderText="Име"/>
+                        <asp:BoundField DataField="Type" HeaderText="Тип"/>
+                    </Columns>
+                </asp:GridView>
 			</div>
 
 			<div class="col-md-3" style="position: relative; margin-top: 33px; padding-left: 18px">

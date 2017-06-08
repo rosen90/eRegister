@@ -40,6 +40,24 @@ namespace eRegister.UserWebForms
                 ddlClass.DataBind();
                 ddlClass.Items.Insert(0, "Клас");
 
+                /**  Load gridview with users  */
+                var userList = from us in db.Users
+                               join ac in db.Actors
+                               on us.UserID equals ac.UserID
+                               join type in db.UserTypes
+                               on us.UserTypeID equals type.UserTypeID
+                               orderby us.UserID ascending
+                               select new
+                               {
+                                   UserID = us.UserID,
+                                   FullName = ac.FirstName + " " + ac.MiddleName + " " + ac.LastName,
+                                   Type = type.Type
+                               };
+
+
+                gridViewUsers.DataSource = userList.ToList();
+                gridViewUsers.DataBind();
+
             }
         }
 
