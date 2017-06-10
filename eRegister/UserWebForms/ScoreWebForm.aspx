@@ -34,4 +34,16 @@
             </ul>
         </div>
     </div>
+    <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="col-md-6">
+            <asp:Label ID="lblWarningScore" runat="server" Text="Няма оценки по избраните от Вас критерии." Visible="false" ForeColor="Red" BorderColor="Red" BackColor="Yellow"></asp:Label>
+            <asp:GridView ID="gridViewScore" runat="server" CssClass="table" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="date" HeaderText="Date" />
+                    <asp:BoundField DataField="scoreType" HeaderText="Вид контрол" />
+                    <asp:BoundField DataField="score" HeaderText="Оценка" />
+                </Columns>
+            </asp:GridView>
+        </div>
+    </div>
 </asp:Content>
