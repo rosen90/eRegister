@@ -46,4 +46,23 @@
             </asp:GridView>
         </div>
     </div>
+    <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="col-md-6">
+            <ul class="personal-info">
+                <li><label>Отсъствия: </label></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+        <div class="col-md-6">
+            <asp:Label ID="lblAbsences" runat="server" Visible="false" Text="Няма данни."></asp:Label>
+            <asp:GridView ID="gridViewAbsences" runat="server" CssClass="table" AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="subject" HeaderText="Предмет"/>
+                    <asp:BoundField DataField="type" HeaderText="Тип отсъствие"/>
+                    <asp:BoundField DataField="date" HeaderText="Дата" />
+                </Columns>
+            </asp:GridView>
+        </div>
+    </div>
 </asp:Content>
