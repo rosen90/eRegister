@@ -370,5 +370,11 @@ namespace eRegister.UserWebForms
             }
             txtSearch.Text = "";
         }
+
+        protected void gridViewUsers_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gridViewUsers.PageIndex = e.NewPageIndex;
+            loadStartPage();
+        }
     }
 }

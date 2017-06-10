@@ -78,14 +78,9 @@
 		<div class="row">
 
 			<div class="col-md-6">
-                <asp:GridView ID="gridViewUsers" runat="server" CssClass="table" AutoGenerateSelectButton="true" AllowPaging="true" AutoGenerateColumns="false">
+                <asp:GridView ID="gridViewUsers" PageSize="10" OnPageIndexChanging="gridViewUsers_PageIndexChanging" runat="server" CssClass="table" AutoGenerateSelectButton="true" AllowPaging="true" AutoGenerateColumns="false">
                     <Columns>
                         <asp:BoundField DataField="UserID" HeaderText="#"/>
-                        <%--<asp:TemplateField HeaderText="Име">
-                            <ItemTemplate>
-                                <div><%#Eval("FirstName")%> <%#Eval("MiddleName")%> <%#Eval("LastName")%></div>
-                            </ItemTemplate>
-                        </asp:TemplateField>--%>
                         <asp:BoundField DataField="FullName" HeaderText="Име"/>
                         <asp:BoundField DataField="Type" HeaderText="Тип"/>
                     </Columns>
