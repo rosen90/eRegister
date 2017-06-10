@@ -44,6 +44,10 @@
                             							
                             <li>
                                 <asp:LinkButton ID="btnProfile" runat="server" OnClick="btnProfile_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Профил </asp:LinkButton>
+                            </li>
+                            
+                            <li>
+                                <asp:LinkButton ID="btnChoose" runat="server" OnClick="btnChoose_Click" Visible="false" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Избор клас </asp:LinkButton>
                             </li> 
 														
                             <li>

@@ -55,8 +55,15 @@ namespace eRegister.UserWebForms
             addressLbl.InnerText = currentActor.Address;
             egnLbl.InnerText = currentActor.EGN;
             schoolLbl.InnerText = currentActor.School.SchooName;
-            devisionLbl.InnerText = currentActor.ClassDevisionDetails.FirstOrDefault().Division.Division1;
-            classLbl.InnerText = currentActor.ClassDevisionDetails.FirstOrDefault().Class.Class1.ToString();
+            devisionLbl.InnerText = "";
+            classLbl.InnerText = "";
+            if ( currentActor.ClassDivisionID != null)
+            {
+                devisionLbl.InnerText = currentActor.ClassDevisionDetails.FirstOrDefault().Division.Division1;
+                classLbl.InnerText = currentActor.ClassDevisionDetails.FirstOrDefault().Class.Class1.ToString();
+            }
+            
+            
             statusLbl.InnerText = getStudentStatus(currentActor.Status ?? false);
             schoolAdressLbl.InnerText = currentActor.School.Address;
             

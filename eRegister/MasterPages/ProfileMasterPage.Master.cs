@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using eRegister.Pages;
 
 namespace eRegister.MasterPages
 {
@@ -11,7 +12,10 @@ namespace eRegister.MasterPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if ( UserMasterPage.getCurrUser().UserType.Type == "учител" )
+            {
+                btnChoose.Visible = true;
+            }
         }
 
         protected void btnScores_Click(object sender, EventArgs e)
@@ -37,6 +41,11 @@ namespace eRegister.MasterPages
         protected void btnLogOut_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/UserWebForms/LogInForm.aspx");
+        }
+
+        protected void btnChoose_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

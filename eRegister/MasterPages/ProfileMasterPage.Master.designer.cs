@@ -31,6 +31,15 @@ namespace eRegister.MasterPages {
         protected global::System.Web.UI.WebControls.LinkButton btnProfile;
         
         /// <summary>
+        /// btnChoose control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnChoose;
+        
+        /// <summary>
         /// btnScores control.
         /// </summary>
         /// <remarks>

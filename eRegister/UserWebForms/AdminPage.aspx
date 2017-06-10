@@ -62,7 +62,7 @@
                 <asp:TextBox ID="txtSearch" runat="server" name="search" placeholder="Търси..." CssClass="form-control"></asp:TextBox>
             </div>
             <div class="col-md-3" style="text-align: left;">
-                <asp:LinkButton ID="searchButton" runat="server" CssClass="btn btn-primary"><span class="glyphicon glyphicon-search"></span></asp:LinkButton>
+                <asp:LinkButton ID="searchButton" runat="server" OnClick="searchButton_Click" CssClass="btn btn-primary"><span class="glyphicon glyphicon-search"></span></asp:LinkButton>
                 
 				<%--<form runat="server" class="search-form">
                 	<div class="form-group has-feedback">
