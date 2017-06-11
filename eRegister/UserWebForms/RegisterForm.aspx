@@ -245,12 +245,15 @@
 			 <div class="clearfix"></div>
 		</div>
 	</div>
-    <div class="clearfix" style="padding-bottom: 50px"></div>
-	<div class="navbar navbar-default navbar-bottom">
-	    <div class="container">
-	      <p class="navbar-text pull-left">© Copyright - E-register 2017</p>  
-	    </div>
-	</div>
+
+
+        <div class="clearfix" style="padding-bottom: 50px"></div>
+        <!-- Footer -->
+        <div class="navbar navbar-default navbar-fixed-bottom footer">
+            <div class="container">
+              <p class="navbar-text pull-left">© Copyright - E-register 2017</p>  
+            </div>
+        </div>
     </form>
 </body>
 </html>

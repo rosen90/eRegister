@@ -381,5 +381,10 @@ namespace eRegister.UserWebForms
         {
             Response.Redirect("~/UserWebForms/RegisterForm.aspx");
         }
+
+        protected void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UserWebForms/LogInForm.aspx");
+        }
     }
 }

@@ -5,10 +5,10 @@
             <h3>Галерия</h3>
         </div>
         <div class="col-md-4" style="text-align: right">
-            <h3 style="text-align: left">Качване на снимки</h3>
+            <h3 style="text-align: left" id="lblHeader" runat="server">Качване на снимки</h3>
         </div>
-               <asp:FileUpload ID="FileUpload1" runat="server"/>
-                        <asp:Button ID="btnUpload" runat="server" Text="Качи" OnClick="Upload" />
+               <asp:FileUpload ID="FileUpload1" Visible="true" runat="server"/>
+                        <asp:Button ID="btnUpload" Visible="true" runat="server" Text="Качи" OnClick="Upload" />
                         <hr />
                         <div class="row">
                            <div class="col-md-3">

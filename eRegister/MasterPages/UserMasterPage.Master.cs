@@ -26,8 +26,16 @@ namespace eRegister.Pages
             var db = new eRegisterContext();
             if (CheckForUser())
             {
-                Session["userid"] = currentUser.UserID;
-                Response.Redirect(string.Format("~/UserWebForms/ProfileWebForm.aspx?id={0}", db.Actors.First(x => x.UserID == currentUser.UserID).ActorID));
+                if ( currentUser.UserTypeID == 2 )
+                {
+                    Response.Redirect("~/UserWebForms/AdminPage.aspx");
+                }
+                else
+                {
+                    Session["userid"] = currentUser.UserID;
+                    Response.Redirect(string.Format("~/UserWebForms/ProfileWebForm.aspx?id={0}", db.Actors.First(x => x.UserID == currentUser.UserID).ActorID));
+                }
+                
             }
             else
             {

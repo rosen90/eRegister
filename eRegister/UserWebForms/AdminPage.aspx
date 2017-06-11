@@ -35,7 +35,7 @@
 			</div>
 
 			<div class="col-md-3" style="text-align: right;">
-				<button class="btn btn-primary exit-btn">Изход</button>
+                <asp:Button ID="btnLogOut" runat="server" CssClass="btn btn-primary exit-btn" Text="Изход" OnClick="btnLogOut_Click" />
 			</div>
 		</div>
 

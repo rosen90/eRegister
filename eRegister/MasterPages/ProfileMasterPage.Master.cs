@@ -12,20 +12,23 @@ namespace eRegister.MasterPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ( UserMasterPage.getCurrUser().UserType.Type == "учител" )
+            if ( UserMasterPage.getCurrUser().UserTypeID == 4 )
             {
                 btnChoose.Visible = true;
+            }
+            if ( UserMasterPage.getCurrUser().UserTypeID == 2)
+            {
+                btnProfile.Visible = false;
+            }
+            else
+            {
+                btnAdminPage.Visible = false;
             }
         }
 
         protected void btnScores_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/UserWebForms/ScoreWebForm.aspx");
-        }
-
-        protected void btnMessages_Click(object sender, EventArgs e)
-        {
-
         }
 
         protected void btnGallery_Click(object sender, EventArgs e)
@@ -46,6 +49,11 @@ namespace eRegister.MasterPages
         protected void btnChoose_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/UserWebForms/ChooseClassWebForm.aspx");
+        }
+
+        protected void btnAdminPage_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UserWebForms/AdminPage.aspx");
         }
     }
 }

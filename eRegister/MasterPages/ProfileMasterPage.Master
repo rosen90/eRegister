@@ -45,6 +45,10 @@
                             <li>
                                 <asp:LinkButton ID="btnProfile" runat="server" OnClick="btnProfile_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Профил </asp:LinkButton>
                             </li>
+
+                            <li>
+                                <asp:LinkButton ID="btnAdminPage" runat="server" OnClick="btnAdminPage_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Админ панел </asp:LinkButton>
+                            </li>
                             
                             <li>
                                 <asp:LinkButton ID="btnChoose" runat="server" OnClick="btnChoose_Click" Visible="false" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-user'></i> Избор клас </asp:LinkButton>
@@ -52,9 +56,6 @@
 														
                             <li>
 	                            <asp:LinkButton ID="btnScores" runat="server" OnClick="btnScores_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-ok'></i> Оценки </asp:LinkButton>
-                            </li>
-                            <li>
-	                            <asp:LinkButton ID="btnMessages" runat="server" OnClick="btnMessages_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-envelope'></i> Съобщения </asp:LinkButton>
                             </li>
                             <li>
 	                            <asp:LinkButton ID="btnGallery" runat="server" OnClick="btnGallery_Click" CausesValidation="false" CssClass="btn col-md-12 menu-btn" > <i class='glyphicon glyphicon-picture'></i> Галерия </asp:LinkButton>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using eRegister.Pages;
 
 namespace eRegister.UserWebForms
 {
@@ -23,7 +24,16 @@ namespace eRegister.UserWebForms
                 }
                 GridView1.DataSource = files;
                 GridView1.DataBind();
+
             }
+
+            if ( UserMasterPage.getCurrUser().UserTypeID != 2)
+            {
+                lblHeader.InnerText = "";
+                FileUpload1.Visible = false;
+                btnUpload.Visible = false;
+            }
+
         }
 
         protected void Upload(object sender, EventArgs e)
