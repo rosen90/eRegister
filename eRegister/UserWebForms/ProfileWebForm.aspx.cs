@@ -59,8 +59,11 @@ namespace eRegister.UserWebForms
             classLbl.InnerText = "";
             if ( currentActor.ClassDivisionID != null)
             {
-                devisionLbl.InnerText = currentActor.ClassDevisionDetails.FirstOrDefault().Division.Division1;
-                classLbl.InnerText = currentActor.ClassDevisionDetails.FirstOrDefault().Class.Class1.ToString();
+                int divClassId = (int)currentActor.ClassDivisionID;
+                int divId = db.ClassDevisionDetails.FirstOrDefault(x => x.ClassDevisionDetailsID == divClassId).DivID;
+                devisionLbl.InnerText = db.Divisions.FirstOrDefault(x => x.DivisionID == divId).Division1;
+                int classId = db.ClassDevisionDetails.FirstOrDefault(x => x.ClassDevisionDetailsID == divClassId).ClassID;
+                classLbl.InnerText = db.Classes.FirstOrDefault(x => x.ClassID == classId).Class1.ToString();
             }
             
             
