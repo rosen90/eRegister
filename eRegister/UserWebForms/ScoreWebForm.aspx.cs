@@ -57,6 +57,7 @@ namespace eRegister.UserWebForms
                                on ab.SubjectID equals sub.SubjectID
                                join abType in db.AbsenceTypes
                                on ab.AbsenceTypeID equals abType.AbsenceTypeID
+                               where ab.StudentID == currUserID
                                orderby ab.Date
                                select new
                                {
