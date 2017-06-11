@@ -82,6 +82,9 @@
 			<div class="col-md-3" style="position: relative; margin-top: 33px; padding-left: 18px">
                 <asp:Button runat="server" CausesValidation="true" OnClick="RegClick" CssClass="btn btn-primary reg-btn first-reg" Text="Регистрация на потребител" />
 			</div>
+            <div class="col-md-3" style="position: relative; margin-top: 33px; padding-left: 18px">
+                <asp:Button ID="btnGallery" runat="server" CausesValidation="true" OnClick="btnGallery_Click" CssClass="btn btn-primary reg-btn first-reg" Text="Галерия" />
+            </div>
 
 			<div class="col-md-3" style="text-align: right; margin-top: 40px">
 				<img src="../resources/change.png" width="80%" align="right" />

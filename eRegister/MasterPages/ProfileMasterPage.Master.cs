@@ -19,6 +19,7 @@ namespace eRegister.MasterPages
             if ( UserMasterPage.getCurrUser().UserTypeID == 2)
             {
                 btnProfile.Visible = false;
+                btnScores.Visible = false;
             }
             else
             {

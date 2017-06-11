@@ -386,5 +386,10 @@ namespace eRegister.UserWebForms
         {
             Response.Redirect("~/UserWebForms/LogInForm.aspx");
         }
+
+        protected void btnGallery_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UserWebForms/GalleryWebForm.aspx");
+        }
     }
 }
