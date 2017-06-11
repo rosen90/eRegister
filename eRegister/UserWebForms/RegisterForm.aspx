@@ -28,58 +28,51 @@
 				 </div>
 			</div>
 			 <hr>
-			 <div class="row">
-			 	<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
-			 		<div class="col-md-8">
-				 		<label>Потребителско име <span class="star">*</span> :</label>
-				 		<asp:TextBox ID="inputUsername" runat="server" placeholder="Въведете потребителско име" CssClass="form-control" />
-                        <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
-                            ControlToValidate="inputUsername"
-                            ErrorMessage="User name is a required field."
-                            ForeColor="Red"
-                            Enabled="true">
-                        </asp:RequiredFieldValidator>
-				 	</div>
+			 <div class="row" style="padding-top: 20px">
+			 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">			 		
+				 	<label>Потребителско име <span class="star">*</span> :</label>
+				 	<asp:TextBox ID="inputUsername" runat="server" placeholder="Въведете потребителско име" CssClass="form-control" />
+                    <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server"
+                        ControlToValidate="inputUsername"
+                        ErrorMessage="User name is a required field."
+                        ForeColor="Red"
+                        Enabled="true">
+                    </asp:RequiredFieldValidator>
+                </div>				 	
 
-				 	<div class="col-md-8">
-				 		<label>Парола <span class="star">*</span> :</label>
-				 		<asp:TextBox ID="inputPassword" runat="server" TextMode="Password" placeholder="Въведете парола" CssClass="form-control" />
-                        <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
-                            ControlToValidate="inputPassword"
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+				 	<label>Парола <span class="star">*</span> :</label>
+				 	<asp:TextBox ID="inputPassword" runat="server" TextMode="Password" placeholder="Въведете парола" CssClass="form-control" />
+                    <asp:RequiredFieldValidator id="RequiredFieldValidator3" runat="server"
+                        ControlToValidate="inputPassword"
+                        ErrorMessage="Password is a required field."
+                        ForeColor="Red"
+                        Enabled="true">
+                    </asp:RequiredFieldValidator>
+				</div>
+
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+				 	<label>Потвърди парола <span class="star">*</span> :</label>
+				 		<asp:TextBox ID="inputPasswordConfirm" runat="server" TextMode="Password" placeholder="Въведете парола" CssClass="form-control" />
+                        <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
+                            ControlToValidate="inputPasswordConfirm"
                             ErrorMessage="Password is a required field."
                             ForeColor="Red"
                             Enabled="true">
                         </asp:RequiredFieldValidator>
-				 	</div>
+				</div>
+			 </div>	
+			 	
+              <hr>
+			 <h3>Тип потребител:</h3>
+			 <div class="clearfix"></div>
+				 <div class="row">
+				 	<div class="col-md-12">
+					 	<asp:DropDownList ID="dropDownListType" AutoPostBack="true" runat="server"></asp:DropDownList>					 
+					 </div>
+				 </div>
+				 <div class="clearfix"></div>		 	
 
-				 	<div class="col-md-8">
-				 		<label>Потвърди парола <span class="star">*</span> :</label>
-				 			<asp:TextBox ID="inputPasswordConfirm" runat="server" TextMode="Password" placeholder="Въведете парола" CssClass="form-control" />
-                            <asp:RequiredFieldValidator id="RequiredFieldValidator2" runat="server"
-                                ControlToValidate="inputPasswordConfirm"
-                                ErrorMessage="Password is a required field."
-                                ForeColor="Red"
-                                Enabled="true">
-                            </asp:RequiredFieldValidator>
-				 	</div>
-			 	</div>	
-			 	<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">	
-			 		<div class="row">
-			 			<div class="col-md-3" id="avatar">
-			 				<img src="../resources/avatar.png" width="100%">
-			 			</div>
-			 		</div>
-			 		<div class="clearfix"></div>
-			 		<div class="row">
-			 			<form class="form-horizontal" id="file"> 
-	 					 	<div class="form-group">
-	   							<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-	  						</div>
-						</form>
-			 		</div>
-			 		
-			 	</div>		 	
-			 </div>
 			 <hr>
 			 <h3>Персонална информация</h3>
 			 <div class="clearfix"></div>
@@ -144,7 +137,7 @@
 							  </div>
 			 			</div>
 			 			<div class="col-md-4">
-				 		<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+				 		<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 				 			<label>Пол:</label> 
 				 		</div>
 				 		<form class="form-horizontal col-md-12"> 
@@ -252,7 +245,7 @@
 			 <div class="clearfix"></div>
 		</div>
 	</div>
-
+    <div class="clearfix" style="padding-bottom: 50px"></div>
 	<div class="navbar navbar-default navbar-bottom">
 	    <div class="container">
 	      <p class="navbar-text pull-left">© Copyright - E-register 2017</p>  

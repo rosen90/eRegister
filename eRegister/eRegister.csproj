@@ -185,6 +185,7 @@
     <Content Include="resources\logo.png" />
     <Content Include="resources\user.jpg" />
     <Content Include="UserWebForms\AdminPage.aspx" />
+    <Content Include="UserWebForms\ChooseClassWebForm.aspx" />
     <Content Include="UserWebForms\GalleryWebForm.aspx" />
     <Content Include="UserWebForms\LogInForm.aspx" />
     <Content Include="UserWebForms\ProfileWebForm.aspx" />
@@ -245,6 +246,13 @@
     </Compile>
     <Compile Include="UserWebForms\AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserWebForms\ChooseClassWebForm.aspx.cs">
+      <DependentUpon>ChooseClassWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserWebForms\ChooseClassWebForm.aspx.designer.cs">
+      <DependentUpon>ChooseClassWebForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserWebForms\GalleryWebForm.aspx.cs">
       <DependentUpon>GalleryWebForm.aspx</DependentUpon>

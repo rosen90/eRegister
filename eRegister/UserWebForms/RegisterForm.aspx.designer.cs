@@ -76,6 +76,15 @@ namespace eRegister.UserWebForms {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
+        /// dropDownListType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList dropDownListType;
+        
+        /// <summary>
         /// Name control.
         /// </summary>
         /// <remarks>

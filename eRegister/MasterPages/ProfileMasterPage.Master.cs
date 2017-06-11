@@ -45,7 +45,7 @@ namespace eRegister.MasterPages
 
         protected void btnChoose_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/UserWebForms/ChooseClassWebForm.aspx");
         }
     }
 }

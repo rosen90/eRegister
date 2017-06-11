@@ -64,14 +64,6 @@
             <div class="col-md-3" style="text-align: left;">
                 <asp:LinkButton ID="searchButton" runat="server" OnClick="searchButton_Click" CssClass="btn btn-primary"><span class="glyphicon glyphicon-search"></span></asp:LinkButton>
                 
-				<%--<form runat="server" class="search-form">
-                	<div class="form-group has-feedback">
-	            		<label for="search" class="sr-only">Търси</label>
-                        <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"></asp:TextBox>
-                        <input type="text" class="form-control" name="search" id="search" placeholder="Търси...">
-	              		<span class="glyphicon glyphicon-search form-control-feedback"></span>
-	            	</div>
-            	</form>--%>
 			</div>	
 		</div>
 
@@ -88,9 +80,7 @@
 			</div>
 
 			<div class="col-md-3" style="position: relative; margin-top: 33px; padding-left: 18px">
-				<button class="btn btn-primary reg-btn first-reg">Регистрация на ученик</button><br/>
-				<button class="btn btn-primary reg-btn">Регистрация на родител</button><br/>
-				<button class="btn btn-primary reg-btn">Регистрация на учител</button><br/>
+                <asp:Button runat="server" CausesValidation="true" OnClick="RegClick" CssClass="btn btn-primary reg-btn first-reg" Text="Регистрация на потребител" />
 			</div>
 
 			<div class="col-md-3" style="text-align: right; margin-top: 40px">

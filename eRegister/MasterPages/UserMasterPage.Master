@@ -52,6 +52,7 @@
 
 			<div class="col-md-5 col-lg-5 col-sm-12 col-xs-12  col-md-offset-1">
 			<h3>Вход в системата</h3>
+                <div class="clearfix"></div>
 				      <div class="form-group">
 				  	    <div class="col-md-4"> 
 				  		    <label for="exampleInputEmail1">Потребител</label>
@@ -87,13 +88,10 @@
 				      </div>
 
 				      <div class="form-group">
-
-				  	    <div class="col-md-6">
+                        <hr /><br />
+				  	    <div class="col-md-6 col-md-offset-4">
                             <asp:Button runat="server" CausesValidation="true" OnClick="Button_Click" CssClass="btn btn-primary col-md-12" Text="Вписване" />
 				  	    </div>
-				        <div class="col-md-6">
-				    	    <asp:Button runat="server" CausesValidation="false" ID="btnRegister" OnClick="btnRegister_Click" CssClass="btn btn-primary col-md-12" Text="Регистрация" />
-				        </div>
 				    
 				      </div>
 			</div>

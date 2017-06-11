@@ -376,5 +376,10 @@ namespace eRegister.UserWebForms
             gridViewUsers.PageIndex = e.NewPageIndex;
             loadStartPage();
         }
+
+        protected void RegClick(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UserWebForms/RegisterForm.aspx");
+        }
     }
 }
