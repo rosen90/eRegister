@@ -40,15 +40,15 @@
 						<li><label>Паралелка: </label> <label id="devisionLbl" runat="server" style="font-weight:normal; font-style:normal; color:black"> A</label></li>
 						<li><label>Клас: </label> <label id="classLbl" runat="server" style="font-weight:normal; font-style:normal; color:black">10</label></li>
 						<li><label>Статус: </label> <label id="statusLbl" runat="server" style="font-weight:normal; font-style:normal; color:black">Учащ</label></li>
-						<li><label>Град: </label> <label id="schoolAdressLbl" runat="server" style="font-weight:normal; font-style:normal; color:black">София</label></li>
+						<li><label>Адрес училище: </label> <label id="schoolAdressLbl" runat="server" style="font-weight:normal; font-style:normal; color:black">София</label></li>
 					</ul>
 				</div>
 				<div class="col-md-6">
 					<ul class="personal-info">
-						<li><h3>Родител:</h3></li>
+						<li><h3 id="h3Parrent" runat="server" visible="false">Родител:</h3></li>
                         <hr/>
-						<li><label>Име:</label> Петър Петров</li>
-                        <li><label>Телефон:</label> +35988323425</li>
+						<li><label id="lblPName" runat="server" visible="false">Име:</label> <label id="lblParName" runat="server" visible="false" style="font-weight:normal; font-style:normal; color:black"></label></li>
+                        <li><label id="lblPNumber" runat="server" visible="false">Телефон:</label><label id="lblParNumber" visible="false" runat="server" style="font-weight:normal; font-style:normal; color:black"></label></li>
 						
 					</ul>
 				</div>

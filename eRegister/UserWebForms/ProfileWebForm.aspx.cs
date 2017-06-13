@@ -53,23 +53,39 @@ namespace eRegister.UserWebForms
             phoneLbl.InnerText = currentActor.PhoneNumber;
             mailLbl.InnerText = currentActor.email;
             addressLbl.InnerText = currentActor.Address;
+            
+            
             egnLbl.InnerText = currentActor.EGN;
             schoolLbl.InnerText = currentActor.School.SchooName;
             devisionLbl.InnerText = "";
             classLbl.InnerText = "";
-            if ( currentActor.ClassDivisionID != null)
+            statusLbl.InnerText = "";
+            if ( currentActor.ClassDivisionID != null && UserMasterPage.getCurrUser().UserTypeID == 1)
             {
                 int divClassId = (int)currentActor.ClassDivisionID;
                 int divId = db.ClassDevisionDetails.FirstOrDefault(x => x.ClassDevisionDetailsID == divClassId).DivID;
                 devisionLbl.InnerText = db.Divisions.FirstOrDefault(x => x.DivisionID == divId).Division1;
                 int classId = db.ClassDevisionDetails.FirstOrDefault(x => x.ClassDevisionDetailsID == divClassId).ClassID;
                 classLbl.InnerText = db.Classes.FirstOrDefault(x => x.ClassID == classId).Class1.ToString();
+                statusLbl.InnerText = getStudentStatus(currentActor.Status ?? false);
             }
-            
-            
-            statusLbl.InnerText = getStudentStatus(currentActor.Status ?? false);
+
             schoolAdressLbl.InnerText = currentActor.School.Address;
             
+            if(UserMasterPage.getCurrUser().UserTypeID == 1 && currentActor.ParentlID != null)
+            {
+                int parId = (int)currentActor.ParentlID;
+                Actor parrent = db.Actors.FirstOrDefault(x => x.ActorID == parId);
+                lblParName.InnerText = parrent.FirstName + " " + parrent.MiddleName + " " + parrent.LastName;
+                lblParNumber.InnerText = parrent.PhoneNumber;
+                h3Parrent.Visible = true;
+                lblParName.Visible = true;
+                lblParNumber.Visible = true;
+                lblPName.Visible = true;
+                lblPNumber.Visible = true;
+            }
+            
+
         }
 
         private string getGender( bool gender)

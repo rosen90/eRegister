@@ -63,12 +63,13 @@
 				</div>
 			 </div>	
 			 	
-              <hr>
-			 <h3>Тип потребител:</h3>
+<%--              <hr>
+			 <h3>Тип потребител:</h3>--%>
 			 <div class="clearfix"></div>
 				 <div class="row">
 				 	<div class="col-md-12">
-					 	<asp:DropDownList ID="dropDownListType" AutoPostBack="true" runat="server"></asp:DropDownList>					 
+                         <label for="exampleSelect1">Тип потребител:</label>
+					 	<asp:DropDownList ID="dropDownListType" CssClass="form-control" OnSelectedIndexChanged="dropDownListType_SelectedIndexChanged" AutoPostBack="true" runat="server"></asp:DropDownList>					 
 					 </div>
 				 </div>
 				 <div class="clearfix"></div>		 	
@@ -126,40 +127,11 @@
                                 </asp:RequiredFieldValidator>
 							  </div>
 			 			</div>
-			 			<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
-				 			 <div class="form-group">
-							    <label for="exampleSelect1">Статус:</label>
-							    <select class="form-control" id="exampleSelect1">
-							      <option>учащ</option>
-							      <option>прекъснал</option>
-							      <option>изгонен</option>
-							    </select>
-							  </div>
-			 			</div>
 			 			<div class="col-md-4">
 				 		<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 				 			<label>Пол:</label> 
+                            <asp:DropDownList ID="dropDownListGender" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
 				 		</div>
-				 		<form class="form-horizontal col-md-12"> 
-	 					 	<fieldset class="form-group">
-							    <div class="col-md-6">
-								    <div class="form-check">
-								      <label class="form-check-label">
-								        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-								        Мъж
-								      </label>
-								    </div>
-								</div>
-							     <div class="col-md-6">
-								    <div class="form-check">
-								      <label class="form-check-label">
-								        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-								        Жена
-								      </label>
-								    </div>
-								</div>
-							</fieldset>
-						</form>
 				 	</div>
 			 		</div>
 			 	</div>
@@ -202,45 +174,88 @@
 				 </div>
 				 <div class="clearfix"></div>
 			 
-		 	<hr>
+		 	
 		  	<div class="row">
 			 	<div class="col-md-12">
 				 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
 				 		<div class="form-group">
 						    <label for="exampleSelect1">Паралелка:</label>
-						    <select class="form-control" id="exampleSelect1">
-						      <option>Математическа</option>
-						      <option>Езикова</option>
-						    </select>
+                             <asp:DropDownList ID="dropDownListDivisionDetails" CssClass="form-control" runat="server" AutoPostBack="false"></asp:DropDownList>
 						  </div>
 				 	</div>
 				 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
 				 		<div class="form-group">
 						    <label for="exampleSelect1">Училище:</label>
-						    <select class="form-control" id="exampleSelect1">
-						      <option>СОУ "Проф. д-р Асен Златаров"</option>
-						      <option>НУ "Христо Ботев"</option>
-						    </select>
+                             <asp:DropDownList ID="dropDownListSchool" CssClass="form-control" runat="server" AutoPostBack="false"></asp:DropDownList>
 						  </div>
 				 	</div>
 				 	<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" >
 				 		<div class="form-group">
 						    <label for="exampleSelect1">Град/Село:</label>
-                            <asp:TextBox ID="Town" runat="server" placeholder="Населено място" CssClass="form-control" />
-                            <asp:RequiredFieldValidator id="RequiredFieldValidator11" runat="server"
-                                ControlToValidate="Town"
-                                ErrorMessage="Town is a required field."
-                                ForeColor="Red"
-                                Enabled="true">
-                            </asp:RequiredFieldValidator>
+                            <asp:DropDownList ID="dropDownListTown" runat="server" AutoPostBack="false" CssClass="form-control"></asp:DropDownList>
 						  </div>
 				 	</div>
 				 </div>
 			 </div>
+            <div class="clearfix"></div>
+            <h3 runat="server" id="parrentHeader" visible="false">Информация за родител:</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label runat="server" id="lblParrentName" visible="false">Име:</label>
+                            <asp:TextBox ID="parrentName" runat="server" Visible="false" placeholder="Име" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator12" runat="server"
+                                ControlToValidate="parrentName"
+                                ErrorMessage="Parrent name is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label id="lblParrentMName" visible="false" runat="server">Презиме:</label>
+                            <asp:TextBox ID="parrentMName" runat="server" placeholder="Презиме" Visible="false" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator13" runat="server"
+                                ControlToValidate="parrentMName"
+                                ErrorMessage="Parrent middle name is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label id="lblParrentLName" runat="server" visible="false">Фамилия:</label>
+                            <asp:TextBox ID="parrentLName" runat="server" Visible="false" placeholder="Фамилия" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator14" runat="server"
+                                ControlToValidate="parrentLName"
+                                ErrorMessage="Parrent last name is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <label id="lblParrentPhone" runat="server" visible="false">Тел. номер:</label>
+                            <asp:TextBox ID="parrentPhone" runat="server" Visible="false" placeholder="Тел. номер" CssClass="form-control"></asp:TextBox>
+                            <asp:RequiredFieldValidator id="RequiredFieldValidator15" runat="server"
+                                ControlToValidate="parrentPhone"
+                                ErrorMessage="Parrent phone is a required field."
+                                ForeColor="Red"
+                                Enabled="true">
+                            </asp:RequiredFieldValidator>
+                        </div>
+                    </div>
+                </div>
+            </div>
 			 <hr>
 			 <div class="clearfix"></div>
 			 	<div class="row" id="reg-btn">			 	
-                     <asp:Button runat="server" CausesValidation="true" CssClass="btn btn-primary col-md-4 col-md-offset-4" Text="Регистрация" />
+                     <asp:Button ID="btnSave" OnClick="btnSave_Click" runat="server" CausesValidation="true" CssClass="btn btn-primary col-md-4 col-md-offset-4" Text="Регистрация" />
 			 	</div>
 			 <div class="clearfix"></div>
 		</div>
