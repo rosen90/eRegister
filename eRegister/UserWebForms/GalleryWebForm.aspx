@@ -12,12 +12,34 @@
                         <hr />
                         <div class="row">
                            <div class="col-md-3">
-                                <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" ShowHeader="false" CssClass="Grid">
-                                    <Columns>                               
-                                        <asp:ImageField DataImageUrlField="Value" ControlStyle-Height="200" ControlStyle-Width="180"/>                                      
-                                    </Columns>
-                                </asp:GridView>
-                               
+
+                               <table>
+                                    <tr>
+                                    <td>
+                                       <asp:ListView ID="lvPhotos" runat="server"> 
+                                        <LayoutTemplate>              
+                                               <table ID="groupPlaceholderContainer" runat="server" border="0" cellpadding="0" cellspacing="0">
+                                                     <tr ID="groupPlaceholder" runat="server">
+                                                     </tr>
+                                               </table>                       
+                                        </LayoutTemplate>                       
+                                        <GroupTemplate>
+                                                <tr ID="itemPlaceholderContainer" runat="server">
+                                                    <td ID="itemPlaceholder" runat="server">
+                                                    </td>
+                                                </tr>
+                                            </GroupTemplate>          
+                                            <ItemTemplate>
+                                                <td runat="server" align="center" style="background-color: #e8e8e8; padding: 10px; color: #333333;">                   
+                                                <a href='<%# Container.DataItem %>'>
+                                                <asp:Image CssClass="Timg" runat="server" ID="imPhoto" ImageUrl='<%# Container.DataItem %>' Width="180" Height="200"/>
+                                                </a>
+                                                </td>               
+                                            </ItemTemplate>            
+                                        </asp:ListView>
+                                    </td>
+                                    </tr>
+                                </table>                             
                             </div>
                         </div>
 		</div>

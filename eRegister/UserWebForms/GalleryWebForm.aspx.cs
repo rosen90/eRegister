@@ -17,13 +17,19 @@ namespace eRegister.UserWebForms
             {
                 string[] filePaths = Directory.GetFiles(Server.MapPath("~/images/"));
                 List<ListItem> files = new List<ListItem>();
+                List<string> filesPaths = new List<string>();
                 foreach (string filePath in filePaths)
                 {
-                    string fileName = Path.GetFileName(filePath);
-                    files.Add(new ListItem(fileName, "~/images/" + fileName));
+                    string fileName = "~/images/" + Path.GetFileName(filePath);
+                    filesPaths.Add(fileName);
+                    
+                    //files.Add(new ListItem(fileName, "~/images/" + fileName));
                 }
-                GridView1.DataSource = files;
-                GridView1.DataBind();
+
+                lvPhotos.DataSource = filesPaths;
+                lvPhotos.DataBind();
+                //GridView1.DataSource = files;
+                //GridView1.DataBind();
 
             }
 
