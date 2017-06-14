@@ -25,6 +25,10 @@ namespace eRegister.MasterPages
             {
                 btnAdminPage.Visible = false;
             }
+            if ( UserMasterPage.getCurrUser().UserTypeID != 1 )
+            {
+                btnScores.Visible = false;
+            }
         }
 
         protected void btnScores_Click(object sender, EventArgs e)

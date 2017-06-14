@@ -51,13 +51,14 @@ namespace eRegister.UserWebForms
         {
             var db = new eRegisterContext();
             int currUserID = UserMasterPage.getCurrUser().UserID;
+            int actorId = db.Actors.FirstOrDefault(x => x.UserID == currUserID).ActorID;
 
             var absencesList = from ab in db.Absences
                                join sub in db.Subjects
                                on ab.SubjectID equals sub.SubjectID
                                join abType in db.AbsenceTypes
                                on ab.AbsenceTypeID equals abType.AbsenceTypeID
-                               where ab.StudentID == currUserID
+                               where ab.StudentID == actorId
                                orderby ab.Date
                                select new
                                {

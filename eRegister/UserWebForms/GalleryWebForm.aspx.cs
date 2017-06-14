@@ -14,6 +14,12 @@ namespace eRegister.UserWebForms
         protected void Page_Load(object sender, EventArgs e)
         {
             LoadImages();
+            if ( UserMasterPage.getCurrUser().UserTypeID != 2)
+            {
+                lblHeader.Visible = false;
+                FileUpload1.Visible = false;
+                Button1.Visible = false;
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

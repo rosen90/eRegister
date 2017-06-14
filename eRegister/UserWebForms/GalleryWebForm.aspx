@@ -9,7 +9,10 @@
         </div>
               <asp:FileUpload ID="FileUpload1" runat="server" />
                 <asp:Button ID="Button1" runat="server" Text="Upload" OnClick="Button1_Click" />
-                <asp:Panel ID="Panel1" runat="server" Width="100%" Height="100%" HorizontalAlign="Left"/>
+                
 		</div>
+    <div class="col-md-9">
+        <asp:Panel ID="Panel1" runat="server" Width="100%" Height="100%" HorizontalAlign="Left"/>
+    </div>
 </asp:Content>
 
