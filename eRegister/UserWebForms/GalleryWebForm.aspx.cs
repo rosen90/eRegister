@@ -13,43 +13,38 @@ namespace eRegister.UserWebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                string[] filePaths = Directory.GetFiles(Server.MapPath("~/images/"));
-                List<ListItem> files = new List<ListItem>();
-                List<string> filesPaths = new List<string>();
-                foreach (string filePath in filePaths)
-                {
-                    string fileName = "~/images/" + Path.GetFileName(filePath);
-                    filesPaths.Add(fileName);
-                    
-                    //files.Add(new ListItem(fileName, "~/images/" + fileName));
-                }
-
-                lvPhotos.DataSource = filesPaths;
-                lvPhotos.DataBind();
-                //GridView1.DataSource = files;
-                //GridView1.DataBind();
-
-            }
-
-            if ( UserMasterPage.getCurrUser().UserTypeID != 2)
-            {
-                lblHeader.InnerText = "";
-                FileUpload1.Visible = false;
-                btnUpload.Visible = false;
-            }
-
+            LoadImages();
         }
 
-        protected void Upload(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
             if (FileUpload1.HasFile)
             {
                 string fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);
                 FileUpload1.PostedFile.SaveAs(Server.MapPath("~/images/") + fileName);
-                Response.Redirect(Request.Url.AbsoluteUri);
             }
+                 Response.Redirect(Request.Url.AbsoluteUri);
+        }
+
+        private void LoadImages()
+        {
+            foreach (string strfile in Directory.GetFiles(Server.MapPath("~/images")))
+            {
+                ImageButton imageButton = new ImageButton();
+                FileInfo fi = new FileInfo(strfile);
+                imageButton.ImageUrl = "~/images/" + fi.Name;
+                imageButton.Height = Unit.Pixel(200);
+                imageButton.Style.Add("padding", "5px");
+                imageButton.Width = Unit.Pixel(160);
+                imageButton.Click += new ImageClickEventHandler(imageButton_Click);
+                Panel1.Controls.Add(imageButton);
+            }
+        }
+
+        protected void imageButton_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("PhotoView.aspx?ImageURL=" +
+                ((ImageButton)sender).ImageUrl);
         }
     }
 }

@@ -188,6 +188,7 @@
     <Content Include="UserWebForms\ChooseClassWebForm.aspx" />
     <Content Include="UserWebForms\GalleryWebForm.aspx" />
     <Content Include="UserWebForms\LogInForm.aspx" />
+    <Content Include="UserWebForms\PhotoView.aspx" />
     <Content Include="UserWebForms\ProfileWebForm.aspx" />
     <Content Include="UserWebForms\RegisterForm.aspx" />
     <Content Include="UserWebForms\ScoreWebForm.aspx" />
@@ -267,6 +268,13 @@
     </Compile>
     <Compile Include="UserWebForms\LogInForm.aspx.designer.cs">
       <DependentUpon>LogInForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserWebForms\PhotoView.aspx.cs">
+      <DependentUpon>PhotoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserWebForms\PhotoView.aspx.designer.cs">
+      <DependentUpon>PhotoView.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserWebForms\ProfileWebForm.aspx.cs">
       <DependentUpon>ProfileWebForm.aspx</DependentUpon>
